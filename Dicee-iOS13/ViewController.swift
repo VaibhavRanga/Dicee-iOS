@@ -18,20 +18,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image1 = arrayOfDiceImages.randomElement()
-        let image2 = arrayOfDiceImages.randomElement()
-        
-        diceImageView1.image = image1
-        diceImageView2.image = image2
+        randomizeImages()
         
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        randomizeImages()
+    }
+    
+    func randomizeImages() {
         let image1 = arrayOfDiceImages.randomElement()
         let image2 = arrayOfDiceImages.randomElement()
         
         diceImageView1.image = image1
         diceImageView2.image = image2
     }
-    
 }
